@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="restaurant-usecase" name="Use Case Diagram">
+    <mxGraphModel dx="1144" dy="1451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="system" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#444444;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="680" width="800" x="210" as="geometry" />
+        </mxCell>
+        <mxCell id="systemTitle" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=16;" value="HỆ THỐNG PHỤC VỤ NHÀ HÀNG" vertex="1">
+          <mxGeometry height="30" width="340" x="425" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=14;" value="Client&#xa;(Khách hàng)" vertex="1">
+          <mxGeometry height="140" width="90" x="70" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="orderFood" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontStyle=1;fontSize=13;fontColor=#ffffff;" value="Order Food&#xa;Gọi món ăn" vertex="1">
+          <mxGeometry height="80" width="180" x="340" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="orderWine" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e51400;strokeColor=#B20000;fontStyle=1;fontSize=13;fontColor=#ffffff;" value="Order Wine&#xa;Gọi rượu" vertex="1">
+          <mxGeometry height="80" width="180" x="660" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="eatFood" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontStyle=1;fontSize=13;fontColor=#ffffff;" value="Eat Food&#xa;Dùng món ăn" vertex="1">
+          <mxGeometry height="80" width="180" x="340" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="drinkWine" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fa6800;strokeColor=#C73500;fontStyle=1;fontSize=13;fontColor=#000000;" value="Drink Wine&#xa;Uống rượu" vertex="1">
+          <mxGeometry height="80" width="180" x="660" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="payFood" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontStyle=1;fontSize=13;fontColor=#ffffff;" value="Pay for Food&#xa;Thanh toán tiền ăn" vertex="1">
+          <mxGeometry height="85" width="190" x="335" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="payCash" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="Pay by Cash&#xa;Tiền mặt" vertex="1">
+          <mxGeometry height="70" width="145" x="620" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="payCard" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="Pay by Card&#xa;Thẻ" vertex="1">
+          <mxGeometry height="70" width="145" x="620" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="payQR" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="Pay by QR Code&#xa;Mã QR" vertex="1">
+          <mxGeometry height="70" width="145" x="770" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="assocOrder" edge="1" parent="1" source="actor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;strokeWidth=1.5;" target="orderFood">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="345" />
+              <mxPoint x="290" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assocEat" edge="1" parent="1" source="actor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;strokeWidth=1.5;" target="eatFood">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="345" />
+              <mxPoint x="310" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assocPay" edge="1" parent="1" source="actor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;strokeWidth=1.5;" target="payFood">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="345" />
+              <mxPoint x="290" y="482.56" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="extendOrderWine" edge="1" parent="1" source="orderWine" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1.4;fontStyle=2;labelBackgroundColor=#ffffff;" target="orderFood" value="extend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="extendDrinkWine" edge="1" parent="1" source="drinkWine" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;strokeWidth=1.4;fontStyle=2;labelBackgroundColor=#ffffff;" target="eatFood" value="extend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="genCash" edge="1" parent="1" source="payCash" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;strokeWidth=1.4;" target="payFood">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="genCard" edge="1" parent="1" source="payCard" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;strokeWidth=1.4;" target="payFood">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="genQR" edge="1" parent="1" source="payQR" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;strokeWidth=1.4;" target="payFood">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
